@@ -7,15 +7,17 @@
 (s/def ::age int?)
 
 (def animal-types ["pig" "goat" "cow" "horse"])
-(def set-of-animals [])
 
-(defn generate-animal-population [population-count animal-set]
-  (generate-animal-population((- 1 population-count) (conj animal-set (get animal-types (rand-int (count animal-types))))))
-  animal-set)
+(defn generate-animal-population [n]
+  "Generates the animal population based on n amount of animals"
+  (def set-of-animals [])
+  (doseq [x (range 0 n)]
+    (let [set-of-animals (conj set-of-animals (get animal-types (rand-int (count animal-types))))]))
+  set-of-animals)
 
 (defn -main
   "Executed at the start of this program"
   [& args]
-  (println (generate-animal-population 5 {})
+  (println (generate-animal-population 10))
   
-  ))
+  )
