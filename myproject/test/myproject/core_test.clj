@@ -1,6 +1,6 @@
 (ns myproject.core-test
   (:require [clojure.test :refer :all]
-            [myproject.core :refer :all]))
+            [myproject.AnimalProduction :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

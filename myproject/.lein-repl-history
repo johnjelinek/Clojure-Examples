@@ -1,0 +1,5 @@
+end
+(repeatedly 5 #(rand-nth animal-types))
+(repeatedly 5 (rand-nth animal-types))
+(repeatedly 20 #(rand-nth animal-types))
+end
